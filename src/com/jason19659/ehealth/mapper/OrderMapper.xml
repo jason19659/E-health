@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.jason19659.ehealth.dao.OrderMapper" >
+  <resultMap id="BaseResultMap" type="com.jason19659.ehealth.model.Order" >
+    <id column="id" property="id" jdbcType="CHAR" />
+    <result column="order_id" property="orderId" jdbcType="CHAR" />
+    <result column="price" property="price" jdbcType="DECIMAL" />
+    <result column="detail" property="detail" jdbcType="VARCHAR" />
+    <result column="pubdate" property="pubdate" jdbcType="TIMESTAMP" />
+    <result column="user_id" property="userId" jdbcType="CHAR" />
+    <result column="is_valid" property="isValid" jdbcType="BIT" />
+    <result column="is_deal" property="isDeal" jdbcType="BIT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, order_id, price, detail, pubdate, user_id, is_valid, is_deal
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from order
+    where id = #{id,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from order
+    where id = #{id,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.jason19659.ehealth.model.Order" >
+    insert into order (id, order_id, price, 
+      detail, pubdate, user_id, 
+      is_valid, is_deal)
+    values (#{id,jdbcType=CHAR}, #{orderId,jdbcType=CHAR}, #{price,jdbcType=DECIMAL}, 
+      #{detail,jdbcType=VARCHAR}, #{pubdate,jdbcType=TIMESTAMP}, #{userId,jdbcType=CHAR}, 
+      #{isValid,jdbcType=BIT}, #{isDeal,jdbcType=BIT})
+  </insert>
+  <insert id="insertSelective" parameterType="com.jason19659.ehealth.model.Order" >
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="orderId != null" >
+        order_id,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="detail != null" >
+        detail,
+      </if>
+      <if test="pubdate != null" >
+        pubdate,
+      </if>
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="isValid != null" >
+        is_valid,
+      </if>
+      <if test="isDeal != null" >
+        is_deal,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=CHAR},
+      </if>
+      <if test="orderId != null" >
+        #{orderId,jdbcType=CHAR},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="detail != null" >
+        #{detail,jdbcType=VARCHAR},
+      </if>
+      <if test="pubdate != null" >
+        #{pubdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        #{userId,jdbcType=CHAR},
+      </if>
+      <if test="isValid != null" >
+        #{isValid,jdbcType=BIT},
+      </if>
+      <if test="isDeal != null" >
+        #{isDeal,jdbcType=BIT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.jason19659.ehealth.model.Order" >
+    update order
+    <set >
+      <if test="orderId != null" >
+        order_id = #{orderId,jdbcType=CHAR},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=DECIMAL},
+      </if>
+      <if test="detail != null" >
+        detail = #{detail,jdbcType=VARCHAR},
+      </if>
+      <if test="pubdate != null" >
+        pubdate = #{pubdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userId != null" >
+        user_id = #{userId,jdbcType=CHAR},
+      </if>
+      <if test="isValid != null" >
+        is_valid = #{isValid,jdbcType=BIT},
+      </if>
+      <if test="isDeal != null" >
+        is_deal = #{isDeal,jdbcType=BIT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.jason19659.ehealth.model.Order" >
+    update order
+    set order_id = #{orderId,jdbcType=CHAR},
+      price = #{price,jdbcType=DECIMAL},
+      detail = #{detail,jdbcType=VARCHAR},
+      pubdate = #{pubdate,jdbcType=TIMESTAMP},
+      user_id = #{userId,jdbcType=CHAR},
+      is_valid = #{isValid,jdbcType=BIT},
+      is_deal = #{isDeal,jdbcType=BIT}
+    where id = #{id,jdbcType=CHAR}
+  </update>
+</mapper>
