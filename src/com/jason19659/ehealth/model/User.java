@@ -11,8 +11,6 @@ public class User {
 
     private String truename;
 
-    private String gender;
-
     private String email;
 
     private String phone;
@@ -24,6 +22,8 @@ public class User {
     private String comptence;
 
     private String ip;
+
+    private String address;
 
     public String getId() {
         return id;
@@ -55,14 +55,6 @@ public class User {
 
     public void setTruename(String truename) {
         this.truename = truename == null ? null : truename.trim();
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender == null ? null : gender.trim();
     }
 
     public String getEmail() {
@@ -111,5 +103,13 @@ public class User {
 
     public void setIp(String ip) {
         this.ip = ip == null ? null : ip.trim();
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
     }
 }

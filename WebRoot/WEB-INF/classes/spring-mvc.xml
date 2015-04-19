@@ -30,7 +30,7 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 	</bean>
 
 		<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀  如果ModelAndView对象回传的视图名字是xx，则显示的jsp文件为：/xx.jsp。-->
-	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/" p:suffix=".jsp" />
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/" p:suffix=".html" />
 	<!-- 拦截器-->
 	<!-- 拦截器 -->
 	<!--
