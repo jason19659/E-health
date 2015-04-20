@@ -52,7 +52,9 @@ a:hover { text-decoration: none; }
 }
 
 .links a.home { background: url(../img/home.png) center center no-repeat; }
-.links a.blog { background: url(../img/blog.png) center center no-repeat; margin-right: 50px; }
+.links a.menu { background: url(../img/menu.png) center center no-repeat;  }
+.links a.login { background: url(../img/login.png) center center no-repeat; margin-right: 50px; }
+
 
 .register-container {
     margin-top: 50px;

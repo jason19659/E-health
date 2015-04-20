@@ -2,7 +2,7 @@ package com.jason19659.ehealth.dao;
 
 import com.jason19659.ehealth.model.User;
 
-public interface UserMapper {
+public interface UserMapper  {
     int deleteByPrimaryKey(String id);
 
     int insert(User record);
