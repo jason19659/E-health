@@ -3,6 +3,9 @@
  */
 package com.jason19659.ehealth.service;
 
+import java.util.List;
+
+import com.jason19659.ehealth.model.Medicinal;
 import com.jason19659.ehealth.model.User;
 
 /**
@@ -14,4 +17,5 @@ import com.jason19659.ehealth.model.User;
  */
 public interface UserService extends BaseService<User>{
 	 User selectByUsername(String username);
+	 List<User> selectAll();
 }

@@ -3,6 +3,7 @@ package com.jason19659.ehealth.dao;
 import java.util.List;
 
 import com.jason19659.ehealth.model.Medicinal;
+import com.jason19659.ehealth.model.User;
 
 public interface MedicinalMapper {
     int deleteByPrimaryKey(String id);
@@ -18,4 +19,6 @@ public interface MedicinalMapper {
     int updateByPrimaryKey(Medicinal record);
     
     List<Medicinal> selectTop10();
+    
+    List<Medicinal> selectAll();
 }

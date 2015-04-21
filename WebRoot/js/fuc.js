@@ -29,6 +29,11 @@ function getPath(){
 	 
 }
 
+function jumpTo(url) {
+	var url2 = getPath() + url;
+	window.location.href = url2; 
+}
+
 function sumbitForm(url) {
 	var url2 = getPath() + url;
 	document.reg.action = url2;

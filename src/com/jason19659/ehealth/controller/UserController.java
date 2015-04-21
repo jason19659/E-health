@@ -31,6 +31,30 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@RequestMapping("/login")
+	public String index(User user,HttpServletRequest request) {
+		User daoUser = userService.selectByUsername(user.getUsername());
+		if (user.getUsername() == null || user.getPassword() == null) {
+			return "redirect:/index";
+		}
+		if (daoUser == null) {
+			request.getSession().setAttribute("errMsg", "用户名不存在");
+			return "/information";
+		} else if (!daoUser.getPassword().equals(user.getPassword())) {
+			request.getSession().setAttribute("errMsg", "密码错误");
+			return "/information";
+		} else  {
+			request.getSession().setAttribute("user", daoUser);
+			request.getSession().setAttribute("isLogin", true);
+			if (daoUser.getComptence().equals("admin")) {
+				return "redirect:/admin";
+			}
+		}
+		
+		return "redirect:/index";
+	}
+	
+	
 	@RequestMapping("/register")
 	public String register(User u,HttpServletRequest req) {
 		u.setUsername(ReplaceSpecialString.replaceTag(u.getUsername()));

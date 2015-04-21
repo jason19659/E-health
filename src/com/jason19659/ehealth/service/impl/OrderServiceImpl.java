@@ -3,10 +3,13 @@
  */
 package com.jason19659.ehealth.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.jason19659.ehealth.dao.OrderMapper;
 import com.jason19659.ehealth.model.Order;
+import com.jason19659.ehealth.model.User;
 import com.jason19659.ehealth.service.OrderService;
 
 /**
@@ -68,5 +71,13 @@ public class OrderServiceImpl implements OrderService{
 	@Override
 	public int updateByPrimaryKey(Order record) {
 		return mapper.updateByPrimaryKey(record);
+	}
+
+	/* 
+	 * @see com.jason19659.ehealth.service.OrderService#selectAll()
+	 */
+	@Override
+	public List<Order> selectAll() {
+		return mapper.selectAll();
 	}
 }

@@ -24,6 +24,12 @@
     from medicinal
     where id = #{id,jdbcType=CHAR}
   </select>
+  <select id="selectAll" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from medicinal
+ 
+  </select>
    <select id="selectTop10" resultMap="BaseResultMap" >
     select 
     <include refid="Base_Column_List" />

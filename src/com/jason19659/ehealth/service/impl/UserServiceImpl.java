@@ -3,6 +3,8 @@
  */
 package com.jason19659.ehealth.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -73,6 +75,14 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public int updateByPrimaryKey(User record) {
 		return mapper.updateByPrimaryKey(record);
+	}
+
+	/* 
+	 * @see com.jason19659.ehealth.service.UserService#selectAll()
+	 */
+	@Override
+	public List<User> selectAll() {
+		return mapper.selectAll();
 	}
 
 }

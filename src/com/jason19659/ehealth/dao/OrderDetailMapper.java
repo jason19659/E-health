@@ -1,6 +1,9 @@
 package com.jason19659.ehealth.dao;
 
+import java.util.List;
+
 import com.jason19659.ehealth.model.OrderDetail;
+import com.jason19659.ehealth.model.User;
 
 public interface OrderDetailMapper {
     int deleteByPrimaryKey(String id);
@@ -14,4 +17,6 @@ public interface OrderDetailMapper {
     int updateByPrimaryKeySelective(OrderDetail record);
 
     int updateByPrimaryKey(OrderDetail record);
+    
+    List<OrderDetail> selectAll();
 }
