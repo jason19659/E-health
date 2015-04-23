@@ -6,6 +6,7 @@ package com.jason19659.ehealth.controller;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -32,17 +33,17 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/login")
-	public String index(User user,HttpServletRequest request) {
+	public String login(User user,HttpServletRequest request) {
 		User daoUser = userService.selectByUsername(user.getUsername());
 		if (user.getUsername() == null || user.getPassword() == null) {
-			return "redirect:/index";
+			return "redirect:/index.html";
 		}
 		if (daoUser == null) {
 			request.getSession().setAttribute("errMsg", "用户名不存在");
-			return "/information";
-		} else if (!daoUser.getPassword().equals(user.getPassword())) {
+			return "/information.html";
+		} else if (EncodeUtil.checkPassword(user.getPassword(), daoUser.getPassword())) {
 			request.getSession().setAttribute("errMsg", "密码错误");
-			return "/information";
+			return "/information.html";
 		} else  {
 			request.getSession().setAttribute("user", daoUser);
 			request.getSession().setAttribute("isLogin", true);
@@ -51,7 +52,7 @@ public class UserController {
 			}
 		}
 		
-		return "redirect:/index";
+		return "redirect:/index.html";
 	}
 	
 	
@@ -63,16 +64,18 @@ public class UserController {
 		if (!req.getParameter("repassword").equals(u.getPassword())) {
 			req.getSession().setAttribute("errMsg", "请输入一致的密码");
 			System.out.println("请输入一致的密码");
-			return "redirect:/index.html";
+			return "redirect:/register.html";
 		}
 		if (dUser != null) {
 			req.getSession().setAttribute("errMsg", "用户名已存在");
 			System.out.println("用户名已存在");
-			return "redirect:/index.html";
+			return "redirect:/register.html";
 		} else {
 			u.setPassword(EncodeUtil.encodePassword(u.getPassword()));
 			u.setComptence("user");
 			userService.insert(u);
+			req.getSession().setAttribute("user", userService.selectByUsername(u.getUsername()));
+			req.getSession().setAttribute("isLogin", true);
 		}
 		return "redirect:/index.html";
 	}
@@ -94,5 +97,25 @@ public class UserController {
 		}
 		
 		return "用户名可用";
+	}
+	
+	@RequestMapping("/isLogin")
+	@ResponseBody
+	public User isLogin(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		
+		if (session.getAttribute("user") != null && !session.getAttribute("user").equals("")) {
+			if (session.getAttribute("isLogin") != null && (Boolean)session.getAttribute("isLogin")) {
+				return (User) session.getAttribute("user");
+			}
+		}
+		return null;
+	}
+	
+	@RequestMapping("/quit")
+	public String quit(HttpServletRequest request) {
+		request.getSession().setAttribute("user", "");
+		request.getSession().setAttribute("isLogin", false);
+		return "redirect:/index.html";
 	}
 }

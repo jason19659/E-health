@@ -1,6 +1,11 @@
 package com.jason19659.ehealth.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+
+import com.jason19659.ehealth.utils.JsonDateSerializer;
 
 public class Medicinal {
     private String id;
@@ -13,7 +18,7 @@ public class Medicinal {
 
     private String introduction;
 
-    private Long price;
+    private BigDecimal price;
 
     private String detail;
 
@@ -24,6 +29,39 @@ public class Medicinal {
     private Integer stock;
 
     private Integer sales;
+    
+    public void toAlert() {
+    	if ("".equals(id)) {
+			id = null;
+		}
+    	if ("".equals(name)) {
+    		name = null;
+		}
+    	if ("".equals(type)) {
+    		type = null;
+		}
+    	if ("".equals(manufacturer)) {
+    		manufacturer = null;
+		}
+    	if ("".equals(introduction)) {
+    		introduction = null;
+		}
+    	if ("".equals(price)) {
+    		price = null;
+		}
+    	if ("".equals(detail)) {
+    		detail = null;
+		}
+    	if ("".equals(image)) {
+    		image = null;
+		}
+    	if ("".equals(stock)) {
+    		stock = null;
+		}
+    	if ("".equals(sales)) {
+    		sales = null;
+		}
+    }
 
     public String getId() {
         return id;
@@ -65,11 +103,11 @@ public class Medicinal {
         this.introduction = introduction == null ? null : introduction.trim();
     }
 
-    public Long getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -80,11 +118,12 @@ public class Medicinal {
     public void setDetail(String detail) {
         this.detail = detail == null ? null : detail.trim();
     }
-
+    @JsonSerialize(using=JsonDateSerializer.class)
     public Date getPubdate() {
         return pubdate;
     }
 
+  
     public void setPubdate(Date pubdate) {
         this.pubdate = pubdate;
     }

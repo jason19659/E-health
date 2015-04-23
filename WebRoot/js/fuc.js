@@ -1,3 +1,4 @@
+
 function checkUsername(){
 	var username;
 	username = document.getElementById('username').value;
@@ -9,6 +10,12 @@ function checkUsername(){
 		 
 	 
 }
+
+function getParam(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); return null; 
+} 
 
 
 function getPath(){
@@ -33,7 +40,11 @@ function jumpTo(url) {
 	var url2 = getPath() + url;
 	window.location.href = url2; 
 }
-
+function sumbitForm2(url) {
+	var url2 = getPath() + url;
+	document.reg2.action = url2;
+	document.reg2.submit();
+}
 function sumbitForm(url) {
 	var url2 = getPath() + url;
 	document.reg.action = url2;

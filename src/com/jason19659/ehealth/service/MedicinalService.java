@@ -17,5 +17,7 @@ import com.jason19659.ehealth.model.User;
  */
 public interface MedicinalService extends BaseService<Medicinal>{
 	List<Medicinal> selectTop10();
+	List<Medicinal> selectTop5();
 	 List<Medicinal> selectAll();
+	 List<Medicinal> selectMost4();
 }	

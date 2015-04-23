@@ -15,6 +15,7 @@
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <!-- dropdown -->
 <script src="js/jquery.easydropdown.js"></script>
+<script src="js/fuc.js"></script>
 <!-- start menu -->
 <link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
@@ -30,33 +31,77 @@
 					source_image_width: 900,
 					source_image_height: 1200,
 					show_hint: true,
-					click_callback: function(image_anchor, instance_id){
-						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
-					}
+					
 				});
 
 			});
 		</script>
+		<script type="text/javascript">
+
+	var url = getPath() + "/api/medicinal/get/"+getParam("id");
+	var med;
+	$.getJSON(url,function(data) {
+						med = data;
+						$("#k").prepend( "<h1>"+med.name+"</h1>");
+						$(".m_5").prepend( med.price);
+						$("#i").prepend( med.introduction);
+						$("#d").prepend( med.detail);
+						document.getElementById("im").src = med.image;
+						$("#im").attr("src",med.image);
+						$("#im2").attr("src",med.image);
+						$('#etalage').etalage().whatever();
+					});
+</script>
+<script type="text/javascript">
+	var url = getPath() + "/api/medicinal/showMost4";
+	var d;
+	$.getJSON(url,function(data) {
+						d = data;
+						var txt2;
+
+						for (var i = 0; i < data.length; i++) {
+						var txt = 
+							"<div class=\"col-sm-3 grid_1\">"
+	          	   			+"	 <a href=\"single.html\">"
+				   			+"	 	<img src=\"images/pic9.jpg\" class=\"img-responsive\" />"
+					    	+"	 	 <h3>"+data[i].name+"</h3>"
+					   	 	+"		  <p>"+data[i].introduction+"</p>"
+				   		   	+" 		 <h4>"+data[i].price+" 元</h4>"
+			         		+"	</a>  "
+				 			+"</div> "
+							$(".span_3").append(txt);
+						}
+
+					});	
+</script>
+
+
 </head>
 <body>
 <div class="header_top">
-   <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="logo span4">
-                        <h1><a href="">E-Health<span class="red">.</span></a></h1>
-                    </div>
-                    <div class="links span8">
-                        <a class="home" href="" rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
-                        <a class="menu" href="" rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
-                        <a class="login" href="" rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="logo span4">
+						<h1>
+							<a href="">E-Health<span class="red">.</span></a>
+						</h1>
+					</div>
+					<div class="links span8">
+						<a class="home" href="#" onclick="jumpTo('/index.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
+						<a class="menu" href="#" onclick="jumpTo('/menu.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
+						<a class="login" href="#" onclick="jumpTo('/login.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
+						<a class="register" href="#" onclick="jumpTo('/register.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="注册"></a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  
-</div>
+	</div>
 
 <div class="menu">
 	<div class="container">
@@ -71,25 +116,24 @@
 	   	       <div class="grid images_3_of_2">
 						<ul id="etalage">
 							<li>
-								<a href="optionallink.html">
-									<img class="etalage_thumb_image" src="images/s1.jpg" class="img-responsive" />
-									<img class="etalage_source_image" src="images/s1.jpg" class="img-responsive" title="" />
+								<a id="ah">
+									<img id="im" class="etalage_thumb_image" src="assets/img/m.png" class="img-responsive" />
+									<img id="im2" class="etalage_source_image" src="assets/img/m.png"  class="img-responsive" title="" />
 								</a>
 							</li>
 							
 						</ul>
 						 <div class="clearfix"></div>		
 				  </div> 
-				  <div class="desc1 span_3_of_2">
-				    <h1>Lorem ipsum dolor sit amet</h1>
-				    <p class="m_5">Rs. 888 <span class="reducedfrom">Rs. 999</span> <a href="#">click for offer</a></p>
+				  <div class="desc1 span_3_of_2" id="k">
+				   
+				    <p class="m_5"> 元 <a href="#">点击购买</a></p>
 				    <div class="btn_form">
 						<form>
 							<input type="submit" value="buy" title="">
 						</form>
 					 </div>
-					 <span class="m_link"><a href="#">login to save in wishlist</a> </span>
-					 <p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit </p>
+					 <p class="m_text2" id="i"></p>
 				  </div>
 				  <div class="clearfix"></div>	
        </div>
@@ -101,47 +145,13 @@
       <div class="clearfix"> </div>
      </div>
        <div class="toogle">
-     	<h2>Product Details</h2>
-     	<p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero.</p>
+     	<h2>详细信息</h2>
+     	<p class="m_text2" id="d"></p>
      </div>
-     <div class="toogle">
-     	<h2>More Information</h2>
-     	<p class="m_text2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
-     </div>
-     <h4 class="head_single">Related Products</h4>
+    
+     <h4 class="head_single"> 最近上市</h4>
      <div class="span_3">
-	          	 <div class="col-sm-3 grid_1">
-	          	    <a href="single.html">
-				     <img src="images/pic9.jpg" class="img-responsive" alt=""/>
-				     <h3>parum clari</h3>
-				   	 <p>Duis autem vel eum iriure</p>
-				   	 <h4>Rs.399</h4>
-			         </a>  
-				  </div> 
-				<div class="col-sm-3 grid_1">
-	          	    <a href="single.html">
-				     <img src="images/pic8.jpg" class="img-responsive" alt=""/>
-				     <h3>parum clari</h3>
-				   	 <p>Duis autem vel eum iriure</p>
-				   	 <h4>Rs.399</h4>
-			         </a>  
-				  </div> 
-				 <div class="col-sm-3 grid_1">
-	          	    <a href="single.html">
-				     <img src="images/pic1.jpg" class="img-responsive" alt=""/>
-				     <h3>parum clari</h3>
-				   	 <p>Duis autem vel eum iriure</p>
-				   	 <h4>Rs.399</h4>
-			         </a>  
-				  </div> 
-				  <div class="col-sm-3 grid_1">
-	          	    <a href="single.html">
-				     <img src="images/pic3.jpg" class="img-responsive" alt=""/>
-				     <h3>parum clari</h3>
-				   	 <p>Duis autem vel eum iriure</p>
-				   	 <h4>Rs.399</h4>
-			         </a>  
-				  </div> 
+	          	 
 				  <div class="clearfix"></div>
 	     </div>
       </div>

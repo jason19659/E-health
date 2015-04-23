@@ -91,4 +91,20 @@ public class MedicinalServiceImpl implements  MedicinalService {
 		return mapper.selectAll();
 	}
 
+	/* 
+	 * @see com.jason19659.ehealth.service.MedicinalService#selectMost4()
+	 */
+	@Override
+	public List<Medicinal> selectMost4() {
+		return mapper.selectMost4();
+	}
+
+	/* 
+	 * @see com.jason19659.ehealth.service.MedicinalService#selectTop5()
+	 */
+	@Override
+	public List<Medicinal> selectTop5() {
+		return mapper.selectTop5();
+	}
+
 }

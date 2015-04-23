@@ -24,6 +24,19 @@
     from medicinal
     where id = #{id,jdbcType=CHAR}
   </select>
+  <select id="selectMost4" resultMap="BaseResultMap"  >
+    select 
+    <include refid="Base_Column_List" />
+    from medicinal ORDER BY sales DESC LIMIT 0,4
+ 
+  </select>
+   <select id="selectTop5" resultMap="BaseResultMap" >
+    select 
+    <include refid="Base_Column_List" />
+    from medicinal
+    ORDER BY pubdate desc LIMIT 0 , 5
+  </select>
+  
   <select id="selectAll" resultMap="BaseResultMap"  >
     select 
     <include refid="Base_Column_List" />

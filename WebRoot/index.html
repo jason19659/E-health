@@ -2,402 +2,338 @@
 <html>
 <head>
 <title>Home</title>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="application/x-javascript">
+	
+	 addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+
+</script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!-- Custom Theme files -->
-  <link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="shortcut icon" href="images/favicon.ico" />
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <link rel="stylesheet" href="css/jquery.countdown.css" />
 <!-- Custom Theme files -->
 <!--webfont-->
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <!-- dropdown -->
+<script src="js/fuc.js"></script>
 <script src="js/jquery.easydropdown.js"></script>
 <!-- start menu -->
-<link href="css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/megamenu.css" rel="stylesheet" type="text/css"
+	media="all" />
 <script type="text/javascript" src="js/megamenu.js"></script>
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
+
 <script src="js/responsiveslides.min.js"></script>
 <link rel="stylesheet" href="assets/css/style.css">
-<script>
-    $(function () {
-      $("#slider").responsiveSlides({
-      	auto: true,
-      	nav: false,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
-      });
-    });
-</script>
+
 <script src="js/jquery.countdown.js"></script>
 <script src="js/script.js"></script>
+<script src="js/indexLoad.js"></script>
 </head>
 <body>
-<div class="header_top">
-  <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="logo span4">
-                        <h1><a href="">E-Health<span class="red">.</span></a></h1>
-                    </div>
-                    <div class="links span8">
-                        <a class="home" href="" rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
-                        <a class="menu" href="" rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
-                        <a class="login" href="" rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-  
-</div>
+	<div class="header_top">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="logo span4">
+						<h1>
+							<a href="">E-Health<span class="red">.</span></a>
+						</h1>
+					</div>
+					<div class="links span8">
+						<a class="home" href="#" onclick="jumpTo('/index.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
+						<a class="menu" href="#" onclick="jumpTo('/menu.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
+						<a class="login" href="#" onclick="jumpTo('/login.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
+						<a class="register" href="#" onclick="jumpTo('/register.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="注册"></a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<div class="menu">
-	<div class="container">
-		<div class="menu_box">
-	  </div>
-</div>
-</div>
-<div class="index_slider">
-	<div class="container">
-	  <div class="callbacks_container">
-	      <ul class="rslides" id="slider">
-	        <li><img src="images/1.jpg" class="img-responsive" alt=""/></li>
-	        <li><img src="images/2.jpg" class="img-responsive" alt=""/></li>
-	        <li><img src="images/3.jpg" class="img-responsive" alt=""/></li>
-	      </ul>
-	  </div>
-	</div> 
-</div>
-<div class="content_top">
-	<div class="container">
-		<div class="grid_1">
-			<div class="col-md-3">
-			 <div class="box2">
-			 	<ul class="list1">
-			 		<i class="lock"> </i>
-			 		<li class="list1_right"><p>方便</p></li>
-			 		<div class="clearfix"> </div>
-			 	</ul>
-			 </div>
-			</div>
-			<div class="col-md-3">
-			 <div class="box3">
-			 	<ul class="list1">
-			 		<i class="clock1"> </i>
-			 		<li class="list1_right"><p>省时</p></li>
-			 		<div class="clearfix"> </div>
-			 	</ul>
-			 </div>
-			</div>
-			<div class="col-md-3">
-			 <div class="box4">
-			 	<ul class="list1">
-			 		<i class="vehicle"> </i>
-			 		<li class="list1_right"><p>快速</p></li>
-			 		<div class="clearfix"> </div>
-			 	</ul>
-			 </div>
-			</div>
-			<div class="col-md-3">
-			 <div class="box5">
-			 	<ul class="list1">
-			 		<i class="dollar"> </i>
-			 		<li class="list1_right"><p>节省</p></li>
-			 		<div class="clearfix"> </div>
-			 	</ul>
-			 </div>
-			</div>
-			<div class="clearfix"> </div>
-		</div>
-		<div class="column_center">
-			<h1>专业的流程,靠得住的产品 </h1>
-			<h2>快速,高效,方便,易用</h2>
-		</div>
-		<div class="sellers_grid">
-			<ul class="sellers">
-				<i class="star"> </i>
-				<li class="sellers_desc"><h2>销量最高</h2></li>
-				<div class="clearfix"> </div>
-			</ul>
-		</div>
-		<div class="grid_2">
-			<div class="col-md-3 span_6">
-			  <div class="box_inner">
-				<img src="images/p1.jpg" class="img-responsive" alt=""/>
-				 <div class="sale-box"> </div>
-				 <div class="desc">
-				 	<h3>Ullamcorper suscipit</h3>
-				 	<h4>178,90 $</h4>
-				 	<ul class="list2">
-				 	  <li class="list2_left"><span class="m_1"><a href="#" class="link">Add to Cart</a></span></li>
-				 	  <li class="list2_right"><span class="m_2"><a href="#" class="link1">See More</a></span></li>
-				 	  <div class="clearfix"> </div>
-				 	</ul>
-				 	<div class="heart"> </div>
-				 </div>
-			   </div>
-			</div>
-			<div class="col-md-3 span_6">
-			  <div class="box_inner">
-				<img src="images/p2.jpg" class="img-responsive" alt=""/>
-				 <div class="sale-box"> </div>
-				 <div class="desc">
-				 	<h3>Ullamcorper suscipit</h3>
-				 	<h4>178,90 $</h4>
-				 	<ul class="list2">
-				 	  <li class="list2_left"><span class="m_1"><a href="#" class="link">Add to Cart</a></span></li>
-				 	  <li class="list2_right"><span class="m_2"><a href="#" class="link1">See More</a></span></li>
-				 	  <div class="clearfix"> </div>
-				 	</ul>
-				 	<div class="heart"> </div>
-				 </div>
-			   </div>
-			</div>
-			<div class="col-md-3 span_6">
-			  <div class="box_inner">
-				<img src="images/p3.jpg" class="img-responsive" alt=""/>
-				 <div class="sale-box"> </div>
-				 <div class="desc">
-				 	<h3>Ullamcorper suscipit</h3>
-				 	<h4>178,90 $</h4>
-				 	<ul class="list2">
-				 	  <li class="list2_left"><span class="m_1"><a href="#" class="link">Add to Cart</a></span></li>
-				 	  <li class="list2_right"><span class="m_2"><a href="#" class="link1">See More</a></span></li>
-				 	  <div class="clearfix"> </div>
-				 	</ul>
-				 	<div class="heart"> </div>
-				 </div>
-			   </div>
-			</div>
-			<div class="col-md-3 span_6">
-			  <div class="box_inner">
-				<img src="images/p4.jpg" class="img-responsive" alt=""/>
-				 <div class="sale-box"> </div>
-				 <div class="desc">
-				 	<h3>Ullamcorper suscipit</h3>
-				 	<h4>178,90 $</h4>
-				 	<ul class="list2">
-				 	  <li class="list2_left"><span class="m_1"><a href="#" class="link">Add to Cart</a></span></li>
-				 	  <li class="list2_right"><span class="m_2"><a href="#" class="link1">See More</a></span></li>
-				 	  <div class="clearfix"> </div>
-				 	</ul>
-				 	<div class="heart"> </div>
-				 </div>
-			   </div>
-			</div>
-			<div class="clearfix"> </div>
+	</div>
+
+	<div class="menu">
+		<div class="container">
+			<div class="menu_box"></div>
 		</div>
 	</div>
-</div>
-<div class="content_middle">
-	<div class="container">
-		<ul class="promote">
-			<i class="promote_icon"> </i>
-			<li class="promote_head"><h3>最近上市</h3></li>
-		</ul>
-		 <ul id="flexiselDemo3">
-						<li><img src="images/n1.jpg"  class="img-responsive" /><div class="grid-flex"><h4>Contrary to popular </h4><p>589,90 $</p>
-							<div class="m_3"><a href="#" class="link2">Add to Cart</a></div>
-							<div class="ticket"> </div>
-						</div></li>
-						<li><img src="images/n2.jpg"  class="img-responsive" /><div class="grid-flex"><h4>Contrary to popular </h4><p>589,90 $</p>
-							<div class="m_3"><a href="#" class="link2">Add to Cart</a></div>
-							<div class="ticket"> </div>
-						</div></li>
-						<li><img src="images/n3.jpg"  class="img-responsive" /><div class="grid-flex"><h4>Contrary to popular </h4><p>589,90 $</p>
-							<div class="m_3"><a href="#" class="link2">Add to Cart</a></div>
-							<div class="ticket"> </div>
-						</div></li>
-						<li><img src="images/n4.jpg"  class="img-responsive" /><div class="grid-flex"><h4>Contrary to popular </h4><p>589,90 $</p>
-							<div class="m_3"><a href="#" class="link2">Add to Cart</a></div>
-							<div class="ticket"> </div>
-						</div></li>
-						<li><img src="images/n5.jpg"  class="img-responsive" /><div class="grid-flex"><h4>Contrary to popular </h4><p>589,90 $</p>
-							<div class="m_3"><a href="#" class="link2">Add to Cart</a></div>
-							<div class="ticket"> </div>
-						</div></li>
-				     </ul>
-				    <script type="text/javascript">
-					 $(window).load(function() {
-						$("#flexiselDemo3").flexisel({
-							visibleItems: 6,
-							animationSpeed: 1000,
-							autoPlay:true,
-							autoPlaySpeed: 3000,    		
-							pauseOnHover: true,
-							enableResponsiveBreakpoints: true,
-					    	responsiveBreakpoints: { 
-					    		portrait: { 
-					    			changePoint:480,
-					    			visibleItems: 1
-					    		}, 
-					    		landscape: { 
-					    			changePoint:640,
-					    			visibleItems: 2
-					    		},
-					    		tablet: { 
-					    			changePoint:768,
-					    			visibleItems: 3
-					    		}
-					    	}
-					    });
-					    
-					});
-				   </script>
-				   <script type="text/javascript" src="js/jquery.flexisel.js"></script>
-	</div>
-</div>
-<div class="container">
-   <div class="content_middle_bottom">
-	  <div class="col-md-4">
-		  <ul class="spinner">
-			<i class="spinner_icon"> </i>
-			<li class="spinner_head"><h3>特价</h3></li>
-			<div class="clearfix"> </div>
-		  </ul>
-		  <div class="timer_box">
-			<div class="thumb"> </div>
-			<div class="timer_grid">
- 			<ul id="countdown">
-			</ul>
-				<ul class="navigation">
-					<li>
-						<p class="timeRefDays">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天</p>
-					</li>
-					<li>
-						<p class="timeRefHours">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小时</p>
-					</li>
-					<li>
-						<p class="timeRefMinutes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分钟</p>
-					</li>
-					<li>
-						<p class="timeRefSeconds">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秒</p>
-					</li>
+	<div class="index_slider">
+		<div class="container">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider">
+					<li><img src="images/1.jpg" class="img-responsive" alt="" /></li>
+					<li><img src="images/2.jpg" class="img-responsive" alt="" /></li>
+					<li><img src="images/3.jpg" class="img-responsive" alt="" /></li>
 				</ul>
-          </div>
-          <div class="thumb_desc">
-          	<h3>特价!!!!</h3>
-          	<div class="price">
-			   <span class="reducedfrom">￥99 / kg</span>
-			   <span class="actual">$49 / kg</span>
 			</div>
-		 </div>
-		 <a href="#"><div class="m_3 deal"><div class="link3">买 买 买 ! ! !</div></div></a>
 		</div>
-		</div>
-		<div class="col-md-8">
-		  <ul class="spinner">
-			<i class="paperclip"> </i>
-			<li class="spinner_head"><h3>热门评论</h3></li>
-			<div class="clearfix"> </div>
-		  </ul>
-		      <div class="a-top">
-				 <div class="left-grid">
-					<img src="images/t4.jpg" class="img-responsive" alt=""/>
-				 </div>
-				 <div class="right-grid">
-					<h4><a href="#">评论评论评论评论评论</a></h4>
-					<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
-				 </div>
-				 <div class="but">
-				   <a class="arrow" href="#"> </a>
-				 </div>
-				 <div class="clearfix"></div>
-			 </div>
-			 <div class="a-top">
-				 <div class="left-grid">
-					<img src="images/t5.jpg" class="img-responsive" alt=""/>
-				 </div>
-				 <div class="right-grid">
-					<h4><a href="#">评论评论评论评论评论</a></h4>
-					<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
-				 </div>
-				 <div class="but">
-				   <a class="arrow" href="#"> </a>
-				 </div>
-				 <div class="clearfix"></div>
-			 </div>
-			 <div class="a-top">
-				 <div class="left-grid">
-					<img src="images/t6.jpg" class="img-responsive" alt=""/>
-				 </div>
-				 <div class="right-grid">
-					<h4><a href="#">评论评论评论评论评论</a></h4>
-					<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
-				 </div>
-				 <div class="but">
-				   <a class="arrow" href="#"> </a>
-				 </div>
-				 <div class="clearfix"></div>
-			 </div>
-			 <div class="a-top">
-				 <div class="left-grid">
-					<img src="images/t7.jpg" class="img-responsive" alt=""/>
-				 </div>
-				 <div class="right-grid">
-					<h4><a href="#">评论评论评论评论评论</a></h4>
-					<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
-				 </div>
-				 <div class="but">
-				   <a class="arrow" href="#"> </a>
-				 </div>
-				 <div class="clearfix"></div>
-			 </div>
-		</div>
-		<div class="clearfix"></div>
 	</div>
-    <div class="content_bottom">
-    	<div class="col-md-3 span_1">
-    	  <ul class="spinner">
-			 <i class="box_icon"> </i>
-			 <li class="spinner_head"><h3>我们的环境</h3></li>
-			 <div class="clearfix"> </div>
-		  </ul>
-		  <img src="images/t8.jpg" class="img-responsive" alt=""/>
-    	</div>
-    	<div class="col-md-3 span_1">
-    	  <ul class="spinner">
-			 <i class="bubble"> </i>
-			 <li class="spinner_head"><h3>关于我们</h3></li>
-			 <div class="clearfix"> </div>
-		  </ul>
-		  <p>让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。</p>
-    	</div>
-    	<div class="col-md-3 span_1">
-    	  <ul class="spinner">
-			 <i class="mail"> </i>
-			 <li class="spinner_head"><h3>联系我们</h3></li>
-			 <div class="clearfix"> </div>
-		  </ul>
-		 <ul class="social">
-			<li><a href=""> <i class="fb"> </i> </a></li>
-		    <li><a href=""><i class="tw"> </i> </a></li>
-			<li><a href=""><i class="google"> </i> </a></li>
-			<li><a href=""><i class="linkedin"> </i> </a></li>
-			<li><a href=""><i class="skype"> </i> </a></li>
-		</ul>
-    	</div>
-    	<div class="col-md-3 span_1">
-    	  <ul class="spinner">
-			 <i class="mail"> </i>
-			 <li class="spinner_head"><h3>联系我们</h3></li>
-			 <div class="clearfix"> </div>
-		  </ul>
-		  <p>500 路 辽宁省大连市金州区,</p>
-		  <p>22-56-2-9 软件园大楼,</p>
-		  <p>Phone: 132211441222</p>
-		  <p><a href="jason19659@163.com"> jason</a></p>
-    	</div>
-    	<div class="clearfix"> </div>
-    </div>
-</div>
-<div class="footer">
+	<div class="content_top">
+		<div class="container">
+			<div class="grid_1">
+				<div class="col-md-3">
+					<div class="box2">
+						<ul class="list1">
+							<i class="lock"> </i>
+							<li class="list1_right"><p>方便</p></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box3">
+						<ul class="list1">
+							<i class="clock1"> </i>
+							<li class="list1_right"><p>省时</p></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box4">
+						<ul class="list1">
+							<i class="vehicle"> </i>
+							<li class="list1_right"><p>快速</p></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="box5">
+						<ul class="list1">
+							<i class="dollar"> </i>
+							<li class="list1_right"><p>节省</p></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="column_center">
+				<h1>专业的流程,靠得住的产品</h1>
+				<h2>快速,高效,方便,易用</h2>
+			</div>
+			<div class="sellers_grid">
+				<ul class="sellers">
+					<i class="star"> </i>
+					<li class="sellers_desc"><h2>销量最高</h2></li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+			<div class="grid_2">
+				
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<div class="content_middle">
+		<div class="container">
+			<ul class="promote">
+				<i class="promote_icon"> </i>
+				<li class="promote_head"><h3>最近上市</h3></li>
+			</ul>
+			<ul id="flexiselDemo3">
+
+			</ul>
+			<script type="text/javascript">
+				$(window).load(function() {
+					$("#flexiselDemo3").flexisel({
+						visibleItems : 6,
+						animationSpeed : 1000,
+						autoPlay : true,
+						autoPlaySpeed : 3000,
+						pauseOnHover : true,
+						enableResponsiveBreakpoints : true,
+						responsiveBreakpoints : {
+							portrait : {
+								changePoint : 480,
+								visibleItems : 1
+							},
+							landscape : {
+								changePoint : 640,
+								visibleItems : 2
+							},
+							tablet : {
+								changePoint : 768,
+								visibleItems : 3
+							}
+						}
+					});
+
+				});
+			</script>
+			<script type="text/javascript" src="js/jquery.flexisel.js"></script>
+		</div>
+	</div>
 	<div class="container">
-		
-		<div align="center">Copyright &copy; 2015.<a target="_blank" href="mailto:jason19659@163.com">Jason</a> All rights reserved
+		<div class="content_middle_bottom">
+			<div class="col-md-4">
+				<ul class="spinner">
+					<i class="spinner_icon"> </i>
+					<li class="spinner_head"><h3>特价</h3></li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="timer_box">
+					<div class="thumb"></div>
+					<div class="timer_grid">
+						<ul id="countdown">
+						</ul>
+						<ul class="navigation">
+							<li>
+								<p class="timeRefDays">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;天</p>
+							</li>
+							<li>
+								<p class="timeRefHours">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小时</p>
+							</li>
+							<li>
+								<p class="timeRefMinutes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分钟</p>
+							</li>
+							<li>
+								<p class="timeRefSeconds">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;秒</p>
+							</li>
+						</ul>
+					</div>
+					<div class="thumb_desc">
+						<h3>特价!!!!</h3>
+						<div class="price">
+							<span class="reducedfrom">￥99 / kg</span> <span class="actual">$49
+								/ kg</span>
+						</div>
+					</div>
+					<a href="#"><div class="m_3 deal">
+							<div class="link3">买 买 买 ! ! !</div>
+						</div></a>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<ul class="spinner">
+					<i class="paperclip"> </i>
+					<li class="spinner_head"><h3>热门评论</h3></li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="a-top">
+					<div class="left-grid">
+						<img src="images/t4.jpg" class="img-responsive" alt="" />
+					</div>
+					<div class="right-grid">
+						<h4>
+							<a href="#">评论评论评论评论评论</a>
+						</h4>
+						<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
+					</div>
+					<div class="but">
+						<a class="arrow" href="#"> </a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="a-top">
+					<div class="left-grid">
+						<img src="images/t5.jpg" class="img-responsive" alt="" />
+					</div>
+					<div class="right-grid">
+						<h4>
+							<a href="#">评论评论评论评论评论</a>
+						</h4>
+						<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
+					</div>
+					<div class="but">
+						<a class="arrow" href="#"> </a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="a-top">
+					<div class="left-grid">
+						<img src="images/t6.jpg" class="img-responsive" alt="" />
+					</div>
+					<div class="right-grid">
+						<h4>
+							<a href="#">评论评论评论评论评论</a>
+						</h4>
+						<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
+					</div>
+					<div class="but">
+						<a class="arrow" href="#"> </a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="a-top">
+					<div class="left-grid">
+						<img src="images/t7.jpg" class="img-responsive" alt="" />
+					</div>
+					<div class="right-grid">
+						<h4>
+							<a href="#">评论评论评论评论评论</a>
+						</h4>
+						<p>东风破澳盘奥迪克抖动啊看k阿克顿看看va开打看 豆粕爬坡啊哦的反扒亻[啪嗒砰va地方爱哦傲剑哦的发觉id ]</p>
+					</div>
+					<div class="but">
+						<a class="arrow" href="#"> </a>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="content_bottom">
+			<div class="col-md-3 span_1">
+				<ul class="spinner">
+					<i class="box_icon"> </i>
+					<li class="spinner_head"><h3>我们的环境</h3></li>
+					<div class="clearfix"></div>
+				</ul>
+				<img src="images/t8.jpg" class="img-responsive" alt="" />
+			</div>
+			<div class="col-md-3 span_1">
+				<ul class="spinner">
+					<i class="bubble"> </i>
+					<li class="spinner_head"><h3>关于我们</h3></li>
+					<div class="clearfix"></div>
+				</ul>
+				<p>让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。让您下的每一个订单都踏实安心。</p>
+			</div>
+			<div class="col-md-3 span_1">
+				<ul class="spinner">
+					<i class="mail"> </i>
+					<li class="spinner_head"><h3>联系我们</h3></li>
+					<div class="clearfix"></div>
+				</ul>
+				<ul class="social">
+					<li><a href=""> <i class="fb"> </i>
+					</a></li>
+					<li><a href=""><i class="tw"> </i> </a></li>
+					<li><a href=""><i class="google"> </i> </a></li>
+					<li><a href=""><i class="linkedin"> </i> </a></li>
+					<li><a href=""><i class="skype"> </i> </a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 span_1">
+				<ul class="spinner">
+					<i class="mail"> </i>
+					<li class="spinner_head"><h3>联系我们</h3></li>
+					<div class="clearfix"></div>
+				</ul>
+				<p>500 路 辽宁省大连市金州区,</p>
+				<p>22-56-2-9 软件园大楼,</p>
+				<p>Phone: 132211441222</p>
+				<p>
+					<a href="jason19659@163.com"> jason</a>
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
 	</div>
-</div>
+	<div class="footer">
+		<div class="container">
+
+			<div align="center">
+				Copyright &copy; 2015.<a target="_blank"
+					href="mailto:jason19659@163.com">Jason</a> All rights reserved
+			</div>
+		</div>
 </body>
-</html>		
+</html>

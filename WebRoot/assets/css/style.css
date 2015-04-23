@@ -53,7 +53,10 @@ a:hover { text-decoration: none; }
 
 .links a.home { background: url(../img/home.png) center center no-repeat; }
 .links a.menu { background: url(../img/menu.png) center center no-repeat;  }
-.links a.login { background: url(../img/login.png) center center no-repeat; margin-right: 50px; }
+.links a.login { background: url(../img/login.png) center center no-repeat;  }
+.links a.register { background: url(../img/register.png) center center no-repeat;}
+
+
 
 
 .register-container {
