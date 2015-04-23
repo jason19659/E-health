@@ -1,0 +1,224 @@
+<html style="overflow-x:auto;overflow-y:auto;">
+<head>
+<title>药品管理</title>
+<link rel="shortcut icon" href="../images/favicon.ico" />
+<link href=" ../static/bootstrap/2.3.1/css_cerulean/bootstrap.min.css"
+	type="text/css" rel="stylesheet">
+<script src=" ../static/bootstrap/2.3.1/js/bootstrap.min.js"
+	type="text/javascript"></script>
+<link href=" ../static/bootstrap/2.3.1/awesome/font-awesome.min.css"
+	type="text/css" rel="stylesheet">
+<!--[if lte IE 7]><link href=" ../static/bootstrap/2.3.1/awesome/font-awesome-ie7.min.css" type="text/css" rel="stylesheet" /><![endif]-->
+<!--[if lte IE 6]><link href=" ../static/bootstrap/bsie/css/bootstrap-ie6.min.css" type="text/css" rel="stylesheet" />
+<script src=" ../static/bootstrap/bsie/js/bootstrap-ie.min.js" type="text/javascript"></script><![endif]-->
+<link href=" ../static/jquery-select2/3.4/select2.min.css"
+	rel="stylesheet">
+<script src=" ../static/jquery-select2/3.4/select2.min.js"
+	type="text/javascript"></script>
+<link href=" ../static/jquery-validation/1.11.0/jquery.validate.min.css"
+	type="text/css" rel="stylesheet">
+<script src=" ../static/jquery-validation/1.11.0/jquery.validate.min.js"
+	type="text/javascript"></script>
+<link href=" ../static/jquery-jbox/2.3/Skins/Bootstrap/jbox.min.css"
+	rel="stylesheet">
+<script src=" ../static/jquery-jbox/2.3/jquery.jBox-2.3.min.js"
+	type="text/javascript"></script>
+<script src=" ../static/My97DatePicker/WdatePicker.js"
+	type="text/javascript"></script>
+<link href=" ../static/My97DatePicker/skin/WdatePicker.css"
+	rel="stylesheet" type="text/css">
+<script src=" ../static/common/mustache.min.js" type="text/javascript"></script>
+<link href=" ../static/common/jeesite.min.css" type="text/css"
+	rel="stylesheet">
+<script src=" ../static/common/jeesite.min.js" type="text/javascript"></script>
+<script src=" ../js/fuc.js" type="text/javascript"></script>
+<script src=" ../js/jquery-1.4.4.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script type="text/javascript">
+	var ctx = ' a', ctxStatic = ' static';
+</script>
+<script type="text/javascript">
+	var url = getPath() + "/api/medicinal/showAll";
+	var d;
+	$.getJSON(url,function(data) {
+	
+						d = data;
+
+						for (var i = 0; i < data.length; i++) {
+						var txt = 
+							"<tr> \n"
+							+"	<td>"+d[i].id+"</td>\n"
+							+"	<td>"+d[i].name+"</td>\n"
+							+"	<td>"+d[i].type+"</td>\n"
+							+"	<td>"+d[i].manufacturer+"</td>\n"
+							+"	<td>"+d[i].introduction+"	</td>\n"
+							+"	<td>"+d[i].price+" 元</td>\n"
+							+"	<td>"+d[i].detail+"</td>\n"
+							+"	<td>"+d[i].pubdate+"</td>\n"
+							+"	<td>"+d[i].image+"</td>\n"
+							+"	<td>"+d[i].sales+"</td>\n"
+							+"	<td>"+d[i].stock+"</td>\n"
+							+"	<td><a href=\"javascript:void(0);\" data-reveal-id=\"myModal\"> 添加</a> <a href=\"delMedicinal?id="+d[i].id+"\">删除</a>	<a href=\"javascript:void(0);\" data-reveal-id=\"myModal2\" id="+d[i].id+"> 修改</a>"+"</td>\n"
+							+"</tr>\n"
+						$("tbody").append(txt)
+						}
+						
+					});	
+</script>
+
+<meta name="decorator" content="default">
+<body> 
+
+<div class="header_top">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="logo span4">
+						<h1>
+							<a href="">E-Health<span class="red">.</span></a>
+						</h1>
+					</div>
+					<div class="links span8">
+						<a class="home" href="#" onclick="jumpTo('/index.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
+						<a class="menu" href="#" onclick="jumpTo('/menu.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
+						<a class="login" href="#" onclick="jumpTo('/login.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
+						<a class="register" href="#" onclick="jumpTo('/register.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="注册"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div id="left" style="width: 160px; height: 401px;">
+
+
+		<div class="accordion" id="menu-62">
+			<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse"
+						data-parent="#menu-62" data-href="#collapse-88"
+						href="#collapse-88" title=""><i class="icon-chevron-down"></i>&nbsp;管理</a>
+				</div>
+				<div id="collapse-88" class="accordion-body collapse in">
+					<div class="accordion-inner">
+						<ul class="nav nav-list">
+							<li><a data-href=".menu3-89"
+								onclick="jumpTo('/admin/medicinal.html')" href="#" target="mainFrame"
+								jerichotabindex="1"><i
+									class="icon-circle-arrow-right icon-white"></i>&nbsp;药品管理</a>
+								<ul class="nav nav-list hide" style="margin:0;padding-right:0;">
+								</ul></li>
+							<li><a data-href=".menu3-90" onclick="jumpTo('/admin/order.html')" href="#"
+								target="mainFrame"><i class="icon-circle-arrow-right"></i>&nbsp;订单管理</a>
+								<ul class="nav nav-list hide" style="margin:0;padding-right:0;">
+								</ul>
+							</li>
+							<li  class="active"><a data-href=".menu3-90" onclick="jumpTo('/admin/user.html')" href="#"
+								target="mainFrame"><i class="icon-circle-arrow-right"></i>&nbsp;用户管理</a>
+								<ul class="nav nav-list hide" style="margin:0;padding-right:0;">
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+	<div id="right" style="height: 401px; width: 1164px;">
+		<ul class="nav nav-tabs">
+			<li ><a onclick="jumpTo('/admin/medicinal.html')" href="#">药品管理</a></li>
+			<li>
+				<a onclick="jumpTo('/admin/order.html')" href="#">订单管理</a>
+			</li>
+			<li class="active">
+				<a onclick="jumpTo('/admin/user.html')" href="#">用户管理</a>
+			</li>
+		</ul>
+		<form id="searchForm" class="breadcrumb form-search" style="float:right">
+			
+			
+			<label>标题：</label><input id="title" name="title" class="input-small"
+				type="text"  size="200">&nbsp; <input
+				id="btnSubmit" class="btn btn-primary" type="submit" value="查询">&nbsp;&nbsp;
+			
+		</form>
+		
+
+		<table id="contentTable"
+			class="table table-striped table-bordered table-condensed">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>药品名</th>
+					<th>类别</th>
+					<th>制造商</th>
+					<th>简介	</th>
+					<th>价格(元)</th>
+					<th>详细信息</th>
+					<th>上传日期</th>
+					<th>图片</th>
+					<th>销量</th>
+					<th>库存</th>
+					<th>管理</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				
+
+			
+
+			</tbody>
+		</table>
+		
+	</div>
+		
+		
+	
+	<div id="myModal" class="reveal-modal" >
+	<h2></h2>
+	<form id="reg" action="#" name="reg" method="post">
+	<p>药品名：<input name="name" type="text" class="input" size="10"></p>
+	<p>类别：<input name="type" type="text" class="input" size="5"></p>
+	<p>制造商：<input name="manufacturer" type="text" class="input" size="10"></p>
+	<p>简介：<input name="introduction" type="text" class="input" size="50"></p>
+	<p>价格(元)：<input name="price" type="text" class="input" size="5"></p>
+	<p>图片：<input name="image" type="text" class="input" size="10"></p>
+	<p>销量：<input name="sales" type="text" class="input" size="3"></p>
+	<p>库存：<input name="stock" type="text" class="input" size="3"></p>
+	<p>详细介绍：<textarea  name="detail" class="input" rows="10" cols="50"></textarea>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input name="sub" type="button" value="提交" onclick="sumbitForm('/admin/addMedicinal')"/></p>
+	</form>
+	<a class="close-reveal-modal">×</a> </div>
+	<div id="myModal2" class="reveal-modal">
+	<h2>未修改项请留空</h2>
+	<form id="reg2" action="#" name="reg2" method="post">
+	<p>药品名：<input name="name" type="text" class="input" size="10"><input  name="id" id="mid"  type="hidden"></p>
+	<p>类别：<input name="type" type="text" class="input" size="5"></p>
+	<p>制造商：<input name="manufacturer" type="text" class="input" size="10"></p>
+	<p>简介：<input name="introduction" type="text" class="input" size="50"></p>
+	<p>价格(元)：<input name="price" type="text" class="input" size="5"></p>
+	<p>图片：<input name="image" type="text" class="input" size="10"></p>
+	<p>销量：<input name="sales" type="text" class="input" size="3"></p>
+	<p>库存：<input name="stock" type="text" class="input" size="3"></p>
+	<p>详细介绍：<textarea  name="detail" class="input" rows="10" cols="50"></textarea>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input name="sub" type="button" value="提交" onclick="sumbitForm2('/admin/alertMedicinal')"/></p>
+	</form>
+	<a class="close-reveal-modal">×</a> </div>
+	<div class="footer"></div>
+	
+</body>
+</html>
