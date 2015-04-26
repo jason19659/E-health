@@ -6,6 +6,7 @@ package com.jason19659.ehealth.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jason19659.ehealth.dao.OrderMapper;
 import com.jason19659.ehealth.model.Order;
@@ -19,6 +20,7 @@ import com.jason19659.ehealth.service.OrderService;
  *
  * 2015年4月20日
  */
+@Service
 public class OrderServiceImpl implements OrderService{
 	@Autowired
 	private OrderMapper mapper;

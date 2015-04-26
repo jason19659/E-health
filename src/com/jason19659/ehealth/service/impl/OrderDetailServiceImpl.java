@@ -4,6 +4,7 @@
 package com.jason19659.ehealth.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.jason19659.ehealth.dao.OrderDetailMapper;
 import com.jason19659.ehealth.model.OrderDetail;
@@ -15,6 +16,7 @@ import com.jason19659.ehealth.service.OrderDetailService;
  *
  * 2015年4月20日
  */
+@Service
 public class OrderDetailServiceImpl implements OrderDetailService {
 			
 	@Autowired

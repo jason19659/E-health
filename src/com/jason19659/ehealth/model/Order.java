@@ -1,13 +1,18 @@
 package com.jason19659.ehealth.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
+
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+
+import com.jason19659.ehealth.utils.JsonDateSerializer;
 
 public class Order {
     private String id;
 
     private String orderId;
 
-    private Long price;
+    private BigDecimal price;
 
     private String detail;
 
@@ -35,11 +40,11 @@ public class Order {
         this.orderId = orderId == null ? null : orderId.trim();
     }
 
-    public Long getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Long price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
@@ -50,7 +55,7 @@ public class Order {
     public void setDetail(String detail) {
         this.detail = detail == null ? null : detail.trim();
     }
-
+    @JsonSerialize(using=JsonDateSerializer.class)
     public Date getPubdate() {
         return pubdate;
     }

@@ -49,6 +49,8 @@
 						document.getElementById("im").src = med.image;
 						$("#im").attr("src",med.image);
 						$("#im2").attr("src",med.image);
+						var kkk = "<form action=\"#\" onclick=\"jumpTo('/api/order/"+med.id+"')\"> <input type=\"submit\" value=\"buy\" title=\"\"></form>"
+						$(".btn_form").append(kkk);
 						$('#etalage').etalage().whatever();
 					});
 </script>
@@ -62,8 +64,8 @@
 						for (var i = 0; i < data.length; i++) {
 						var txt = 
 							"<div class=\"col-sm-3 grid_1\">"
-	          	   			+"	 <a href=\"single.html\">"
-				   			+"	 	<img src=\"images/pic9.jpg\" class=\"img-responsive\" />"
+	          	   			+"	 <a href=\"single.html?id="+data[i].id+"\">"
+				   			+"	 	<img src=\""+data[i].image+"\" class=\"img-responsive\" />"
 					    	+"	 	 <h3>"+data[i].name+"</h3>"
 					   	 	+"		  <p>"+data[i].introduction+"</p>"
 				   		   	+" 		 <h4>"+data[i].price+" 元</h4>"
@@ -84,7 +86,7 @@
 				<div class="row">
 					<div class="logo span4">
 						<h1>
-							<a href="">E-Health<span class="red">.</span></a>
+							<a href="" onclick="getPath('/index.htnl')">E-Health<span class="red">.</span></a>
 						</h1>
 					</div>
 					<div class="links span8">
@@ -129,9 +131,7 @@
 				   
 				    <p class="m_5"> 元 <a href="#">点击购买</a></p>
 				    <div class="btn_form">
-						<form>
-							<input type="submit" value="buy" title="">
-						</form>
+						
 					 </div>
 					 <p class="m_text2" id="i"></p>
 				  </div>

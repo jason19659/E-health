@@ -17,20 +17,20 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
-    from order
+    from order_main
     where id = #{id,jdbcType=CHAR}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
+  <select id="selectAll" resultMap="BaseResultMap"  >
     select 
     <include refid="Base_Column_List" />
-    from order
+    from order_main
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
-    delete from order
+    delete from order_main
     where id = #{id,jdbcType=CHAR}
   </delete>
   <insert id="insert" parameterType="com.jason19659.ehealth.model.Order" >
-    insert into order (id, order_id, price, 
+    insert into order_main (id, order_id, price, 
       detail, pubdate, user_id, 
       is_valid, is_deal)
     values (#{id,jdbcType=CHAR}, #{orderId,jdbcType=CHAR}, #{price,jdbcType=DECIMAL}, 
@@ -38,7 +38,7 @@
       #{isValid,jdbcType=BIT}, #{isDeal,jdbcType=BIT})
   </insert>
   <insert id="insertSelective" parameterType="com.jason19659.ehealth.model.Order" >
-    insert into order
+    insert into order_main
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -93,7 +93,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.jason19659.ehealth.model.Order" >
-    update order
+    update order_main
     <set >
       <if test="orderId != null" >
         order_id = #{orderId,jdbcType=CHAR},
@@ -120,7 +120,7 @@
     where id = #{id,jdbcType=CHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.jason19659.ehealth.model.Order" >
-    update order
+    update order_main
     set order_id = #{orderId,jdbcType=CHAR},
       price = #{price,jdbcType=DECIMAL},
       detail = #{detail,jdbcType=VARCHAR},

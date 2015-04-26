@@ -2,6 +2,10 @@ package com.jason19659.ehealth.model;
 
 import java.util.Date;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+
+import com.jason19659.ehealth.utils.JsonDateSerializer;
+
 public class User {
     private String id;
 
@@ -80,7 +84,7 @@ public class User {
     public void setPassword(String password) {
         this.password = password == null ? null : password.trim();
     }
-
+    @JsonSerialize(using=JsonDateSerializer.class)
     public Date getRegdate() {
         return regdate;
     }

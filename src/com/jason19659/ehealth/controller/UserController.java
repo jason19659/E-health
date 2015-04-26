@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.jason19659.ehealth.model.User;
 import com.jason19659.ehealth.service.UserService;
 import com.jason19659.ehealth.utils.EncodeUtil;
+import com.jason19659.ehealth.utils.IpUtils;
 import com.jason19659.ehealth.utils.ReplaceSpecialString;
 
 /**
@@ -39,16 +40,19 @@ public class UserController {
 			return "redirect:/index.html";
 		}
 		if (daoUser == null) {
-			request.getSession().setAttribute("errMsg", "用户名不存在");
-			return "/information.html";
-		} else if (EncodeUtil.checkPassword(user.getPassword(), daoUser.getPassword())) {
-			request.getSession().setAttribute("errMsg", "密码错误");
-			return "/information.html";
+			request.getSession().setAttribute("msg", "用户名不存在");
+			return "/information";
+		} else if (!EncodeUtil.checkPassword(user.getPassword(), daoUser.getPassword())) {
+			request.getSession().setAttribute("msg", "密码错误");
+			return "/information";
 		} else  {
 			request.getSession().setAttribute("user", daoUser);
 			request.getSession().setAttribute("isLogin", true);
 			if (daoUser.getComptence().equals("admin")) {
-				return "redirect:/admin";
+				return "redirect:/admin/medicinal.html";
+			}else
+			if (daoUser.getComptence().equals("root")) {
+				return "redirect:/admin/medicinal.html";
 			}
 		}
 		
@@ -62,18 +66,20 @@ public class UserController {
 		u.setId(UUID.randomUUID().toString());
 		User dUser = userService.selectByUsername(u.getUsername());
 		if (!req.getParameter("repassword").equals(u.getPassword())) {
-			req.getSession().setAttribute("errMsg", "请输入一致的密码");
+			req.getSession().setAttribute("msg", "请输入一致的密码");
 			System.out.println("请输入一致的密码");
-			return "redirect:/register.html";
+			return "redirect:/information.html";
 		}
 		if (dUser != null) {
-			req.getSession().setAttribute("errMsg", "用户名已存在");
+			req.getSession().setAttribute("msg", "用户名已存在");
 			System.out.println("用户名已存在");
-			return "redirect:/register.html";
+			return "redirect:/information.html";
 		} else {
 			u.setPassword(EncodeUtil.encodePassword(u.getPassword()));
 			u.setComptence("user");
+			u.setIp(IpUtils.getClientIP(req));
 			userService.insert(u);
+			
 			req.getSession().setAttribute("user", userService.selectByUsername(u.getUsername()));
 			req.getSession().setAttribute("isLogin", true);
 		}
@@ -99,6 +105,12 @@ public class UserController {
 		return "用户名可用";
 	}
 	
+	
+	@RequestMapping("/getInfo")
+	@ResponseBody
+	public String getInfo(HttpServletRequest request) {
+		return (String) request.getSession().getAttribute("msg");
+	}
 	@RequestMapping("/isLogin")
 	@ResponseBody
 	public User isLogin(HttpServletRequest request) {

@@ -151,4 +151,11 @@ public class Medicinal {
     public void setSales(Integer sales) {
         this.sales = sales;
     }
+    /* 
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+    	return "id : " + id + " name : " + name + "type : " + type;
+    }
 }

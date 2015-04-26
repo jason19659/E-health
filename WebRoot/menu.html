@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Men</title>
+<title>Menu</title>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -26,8 +26,8 @@
 						var txt = 
 							"<div class=\"span_2\"> \n"
 							+" <div class=\"col_1_of_single1 span_1_of_single1\">\n"
-	          	   			+" <a href=\"single.html\">"
-				    		+"	 <img src=\"images/pic2.jpg\" class=\"img-responsive\" />\n"
+	          	   			+" <a href=\"single.html?id="+data[i].id+"\">"
+				    		+"	 <img src=\""+data[i].image+"\" class=\"img-responsive\" />\n"
 				   			+"	 <h3>"+data[i].name+"</h3>\n"
 				  		 	+"	 <p>"+data[i].introduction+"</p\n"
 						   	+"	 <h4>"+data[i].price+" 元</h4>\n"
@@ -47,23 +47,29 @@
 </head>
 <body>
 <div class="header_top">
-   <div class="header">
-            <div class="container">
-                <div class="row">
-                    <div class="logo span4">
-                        <h1><a href="">E-Health<span class="red">.</span></a></h1>
-                    </div>
-                    <div class="links span8">
-                        <a class="home" href="" rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
-                        <a class="menu" href="" rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
-                        <a class="login" href="" rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="logo span4">
+						<h1>
+							<a href="" onclick="getPath('/index.htnl')">E-Health<span class="red">.</span></a>
+						</h1>
+					</div>
+					<div class="links span8">
+						<a class="home" href="#" onclick="jumpTo('/index.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="主页"></a>
+						<a class="menu" href="#" onclick="jumpTo('/menu.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="菜单"></a>
+						<a class="login" href="#" onclick="jumpTo('/login.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="登录"></a>
+						<a class="register" href="#" onclick="jumpTo('/register.html')"
+							rel="tooltip" data-placement="bottom" data-original-title="注册"></a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  
-</div>
+	</div>
 <div class="menu">
 	<div class="container">
 		<div class="menu_box">
@@ -164,10 +170,10 @@
 </div>
 <div class="block block-cart">
         <div class="block-title">
-        <strong><span>购物车</span></strong>
+        <strong><span >购物车</span></strong>
     </div>
     <div class="block-content">
-                        <p class="empty">请点击查看</p>
+                        <p class="empty"><a onclick="jumpTo('/gwc.jsp')" href="#">请点击查看</a></p>
         </div>
 </div>
 <div class="block block-list block-compare">

@@ -151,6 +151,7 @@
 			<label>标题：</label><input id="title" name="title" class="input-small"
 				type="text"  size="200">&nbsp; <input
 				id="btnSubmit" class="btn btn-primary" type="submit" value="查询">&nbsp;&nbsp;
+				<input id="btnSubmit" class="btn btn-primary" type="button" value="重建索引" onclick="junpTo('/admin/reIndex')">
 			
 		</form>
 		
@@ -188,13 +189,13 @@
 	
 	<div id="myModal" class="reveal-modal" >
 	<h2></h2>
-	<form id="reg" action="#" name="reg" method="post">
+	<form id="reg" action="#" name="reg" method="post" enctype="multipart/form-data">
 	<p>药品名：<input name="name" type="text" class="input" size="10"></p>
 	<p>类别：<input name="type" type="text" class="input" size="5"></p>
 	<p>制造商：<input name="manufacturer" type="text" class="input" size="10"></p>
 	<p>简介：<input name="introduction" type="text" class="input" size="50"></p>
 	<p>价格(元)：<input name="price" type="text" class="input" size="5"></p>
-	<p>图片：<input name="image" type="text" class="input" size="10"></p>
+	<p>图片：<input name="imageFile" type="file" value="上传" class="input" size="10"></p>
 	<p>销量：<input name="sales" type="text" class="input" size="3"></p>
 	<p>库存：<input name="stock" type="text" class="input" size="3"></p>
 	<p>详细介绍：<textarea  name="detail" class="input" rows="10" cols="50"></textarea>
@@ -204,13 +205,13 @@
 	<a class="close-reveal-modal">×</a> </div>
 	<div id="myModal2" class="reveal-modal">
 	<h2>未修改项请留空</h2>
-	<form id="reg2" action="#" name="reg2" method="post">
+	<form id="reg2" action="#" name="reg2" method="post" enctype="multipart/form-data">
 	<p>药品名：<input name="name" type="text" class="input" size="10"><input  name="id" id="mid"  type="hidden"></p>
 	<p>类别：<input name="type" type="text" class="input" size="5"></p>
 	<p>制造商：<input name="manufacturer" type="text" class="input" size="10"></p>
 	<p>简介：<input name="introduction" type="text" class="input" size="50"></p>
 	<p>价格(元)：<input name="price" type="text" class="input" size="5"></p>
-	<p>图片：<input name="image" type="text" class="input" size="10"></p>
+	<p>图片：<input name="imageFile" value="上传" type="file" class="input" size="10"></p>
 	<p>销量：<input name="sales" type="text" class="input" size="3"></p>
 	<p>库存：<input name="stock" type="text" class="input" size="3"></p>
 	<p>详细介绍：<textarea  name="detail" class="input" rows="10" cols="50"></textarea>
