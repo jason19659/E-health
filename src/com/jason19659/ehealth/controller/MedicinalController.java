@@ -32,29 +32,44 @@ public class MedicinalController {
 	@RequestMapping("/get/{medicinal_id}")
 	@ResponseBody
 	public Medicinal get(@PathVariable String medicinal_id,HttpServletRequest request) {
-		return service.selectByPrimaryKey(medicinal_id);
+		String path = request.getContextPath();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+		Medicinal m = service.selectByPrimaryKey(medicinal_id);
+		m.setImage(basePath + m.getImage());
+		return m;
 	}
 	
 	@RequestMapping("/showAll")
 	@ResponseBody
-	public List<Medicinal> showAll() {
-		return service.selectAll();
+	public List<Medicinal> showAll(HttpServletRequest request) {
+		
+		return doImages(service.selectAll(), request);
 	}
 	
 	@RequestMapping("/showTop10")
 	@ResponseBody
-	public List<Medicinal> showTop10() {
-		return service.selectTop10();
+	public List<Medicinal> showTop10(HttpServletRequest request) {
+		return  doImages(service.selectTop10(),request);
 	}
 	
 	@RequestMapping("/showTop5")
 	@ResponseBody
-	public List<Medicinal> showTop5() {
-		return service.selectTop5();
+	public List<Medicinal> showTop5(HttpServletRequest request) {
+		return  doImages(service.selectTop5(),request);
 	}
 	@RequestMapping("/showMost4")
 	@ResponseBody
-	public List<Medicinal> showMost4() {
-		return service.selectMost4();
+	public List<Medicinal> showMost4(HttpServletRequest request) {
+		return  doImages(service.selectMost4(),request);
+	}
+	
+	private List<Medicinal> doImages(List<Medicinal> l,HttpServletRequest request) {
+		String path = request.getContextPath();
+		String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+		List<Medicinal> ms = service.selectAll();
+		for (Medicinal m : ms) {
+			m.setImage(basePath + m.getImage());
+		}
+		return ms;
 	}
 }

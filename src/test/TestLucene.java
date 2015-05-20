@@ -19,6 +19,7 @@ import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.search.Filter;
+import org.apache.lucene.search.FuzzyQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
@@ -51,7 +52,7 @@ public class TestLucene {
 	private static ApplicationContext context;
 	private static UserService userService;
 	private static OrderService orderService;
-	private static MedicinalService ms;
+	private static MedicinalService mserver;
 
 	@BeforeClass
 	public static void a() {
@@ -60,14 +61,14 @@ public class TestLucene {
 				"classpath:spring-mybatis.xml" });
 		userService = context.getBean(UserService.class);
 		orderService = context.getBean(OrderService.class);
-		ms = context.getBean(MedicinalService.class);
+		mserver = context.getBean(MedicinalService.class);
 	}
 
 	
 	@Test
 	public void go() throws Exception {
 		createIndex();
-		List<Medicinal> ms = search("4");
+		List<Medicinal> ms = search("法");
 		for (Medicinal medicinal : ms) {
 			System.out.println(medicinal);
 		}
@@ -75,7 +76,7 @@ public class TestLucene {
 	
 	public void createIndex() throws Exception {
 		LuceneUtil.deleteAllIndex();
-		List<Medicinal> lms = ms.selectAll();
+		List<Medicinal> lms = mserver.selectAll();
 		List<Document> docs = new ArrayList<Document>();
 		for (Medicinal m : lms) {
 			Document doc = new Document();
@@ -101,6 +102,7 @@ public class TestLucene {
 		List<Medicinal> result = new ArrayList<Medicinal>();
 		IndexSearcher searcher;
 		try {
+			queryStr = queryStr;
 			String indexDir = TestLucene.class.getClassLoader().getResource("").toURI().getPath()+"search";
 			String[] fields = { "id", "name", "type", "manu", "intro", "detail" };
 			Occur[] occ = { Occur.SHOULD, Occur.SHOULD, Occur.SHOULD,
@@ -109,10 +111,9 @@ public class TestLucene {
 					queryStr, fields, occ, new IKAnalyzer());
 			IndexReader reader = DirectoryReader.open(FSDirectory
 					.open(new File(indexDir)));
-
+			
 			 searcher = new IndexSearcher(reader);
 			TopDocs topDocs = searcher.search(query, 10000);
-			int totalCount = Math.min(topDocs.totalHits, 10000);
 			ScoreDoc[] scoreDocs = topDocs.scoreDocs;
 			for (ScoreDoc scDoc : scoreDocs) {
 				Document document = searcher.doc(scDoc.doc);
@@ -133,8 +134,12 @@ public class TestLucene {
 				m.setDetail(detail);
 				m.setPrice(new BigDecimal(price));
 				result.add(m);
+				List<Medicinal> medicinals = new ArrayList<Medicinal>(result.size());
+				for (Medicinal medicinal : result) {
+					medicinals.add(mserver.selectByPrimaryKey(medicinal.getId()));
+				}
 			}
-			List<Medicinal> medicinals = new ArrayList<Medicinal>();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

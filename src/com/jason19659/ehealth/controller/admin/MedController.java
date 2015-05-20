@@ -61,8 +61,8 @@ public class MedController {
 	}
 	
 	private String upload(HttpServletRequest request,@RequestParam MultipartFile image,String id) throws IOException {
-			String path = request.getContextPath();
-			String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+//			String path = request.getContextPath();
+			String basePath = "";//request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 			String realPath = request.getSession().getServletContext().getRealPath("/upload");
 			String Filename = id+image.getOriginalFilename().substring(image.getOriginalFilename().lastIndexOf(".")) ;
 			FileUtils.copyInputStreamToFile(image.getInputStream(), new File(realPath,Filename));
