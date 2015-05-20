@@ -13,6 +13,7 @@ $(function() {
 	});
 	$(function(){ var url = getPath() + "/api/medicinal/showTop5";
 	var d;
+	$("#flexiselDemo3").empty(); 
 	$.getJSON(url,function(data) {
 						d = data;
 						var txt2;
