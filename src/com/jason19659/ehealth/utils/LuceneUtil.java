@@ -29,7 +29,7 @@ public class LuceneUtil {
 	
 	static {
 		try {
-			indexPath = TestLucene.class.getClassLoader().getResource("").toURI().getPath()+"search";
+			indexPath = TestLucene.class.getClassLoader().getResource("").toURI().getPath()+"../../search";
 		} catch (URISyntaxException e) {
 			e.printStackTrace();
 		}

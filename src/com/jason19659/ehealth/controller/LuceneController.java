@@ -3,20 +3,15 @@
  */
 package com.jason19659.ehealth.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.lucene.document.Document;
-import org.apache.lucene.document.Field;
-import org.apache.lucene.document.StringField;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.jason19659.ehealth.model.Medicinal;
 import com.jason19659.ehealth.service.LuceneService;
-import com.jason19659.ehealth.service.MedicinalService;
-import com.jason19659.ehealth.utils.LuceneUtil;
 
 /**
  * @author <a href="mailto:jason19659@163.com">jason19659</a>
@@ -26,6 +21,7 @@ import com.jason19659.ehealth.utils.LuceneUtil;
  *         2015年4月26日
  */
 @Controller
+@RequestMapping("/")
 public class LuceneController {
 	
 	@Autowired
@@ -37,7 +33,8 @@ public class LuceneController {
 		return "redirect:/admin/medicinal.html";
 	}
 	
-	@RequestMapping("/search")
+	@RequestMapping("/api/search")
+	@ResponseBody
 	public List<Medicinal> search(String query) {
 		return luceneService.search(query);
 	}

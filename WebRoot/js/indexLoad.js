@@ -28,6 +28,7 @@ $(function() {
 							var t4 = "<div class=\"ticket\"></div>\n";
 							var t5 = "</div></li>"
 							var txt = divs + title + t0 + t1 + t2 + t3 + t4 + t5;
+							
 							$("#flexiselDemo3").append(txt);
 						}
 

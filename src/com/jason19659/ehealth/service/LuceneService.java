@@ -69,7 +69,7 @@ public class LuceneService {
 		List<Medicinal> resultList = null;
 		IndexSearcher searcher;
 		try {
-			String indexDir = TestLucene.class.getClassLoader().getResource("").toURI().getPath()+"search";
+			String indexDir = TestLucene.class.getClassLoader().getResource("").toURI().getPath()+"../../search";
 			String[] fields = { "id", "name", "type", "manu", "intro", "detail" };
 			Occur[] occ = { Occur.SHOULD, Occur.SHOULD, Occur.SHOULD,
 					Occur.SHOULD, Occur.SHOULD, Occur.SHOULD };
@@ -100,6 +100,7 @@ public class LuceneService {
 				m.setDetail(detail);
 				result.add(m);
 			}
+			System.out.println(result.size());
 			resultList = new ArrayList<Medicinal>(result.size());
 			for (Medicinal medicinal :result) {
 				resultList.add(ms.selectByPrimaryKey(medicinal.getId())) ;
@@ -108,7 +109,7 @@ public class LuceneService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 
-
+		System.out.println(resultList.size());
 		return resultList;
 	}
 }

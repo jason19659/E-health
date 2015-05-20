@@ -40,6 +40,8 @@
 	var ctx = ' a', ctxStatic = ' static';
 </script>
 <script type="text/javascript">
+	var query = getParam('query');
+	if(query == '' || query == null) {
 	var url = getPath() + "/api/medicinal/showAll";
 	var d;
 	$.getJSON(url,function(data) {
@@ -66,6 +68,35 @@
 						}
 						
 					});	
+	} else {
+		var url = getPath() + "/api/search?query=" + query;
+		var d;
+		$.getJSON(url,function(data) {
+	
+						d = data;
+
+						for (var i = 0; i < data.length; i++) {
+						var txt = 
+							"<tr> \n"
+							+"	<td>"+d[i].id+"</td>\n"
+							+"	<td>"+d[i].name+"</td>\n"
+							+"	<td>"+d[i].type+"</td>\n"
+							+"	<td>"+d[i].manufacturer+"</td>\n"
+							+"	<td>"+d[i].introduction+"	</td>\n"
+							+"	<td>"+d[i].price+" 元</td>\n"
+							+"	<td>"+d[i].detail+"</td>\n"
+							+"	<td>"+d[i].pubdate+"</td>\n"
+							+"	<td>"+d[i].image+"</td>\n"
+							+"	<td>"+d[i].sales+"</td>\n"
+							+"	<td>"+d[i].stock+"</td>\n"
+							+"	<td><a href=\"javascript:void(0);\" data-reveal-id=\"myModal\"> 添加</a> <a href=\"delMedicinal?id="+d[i].id+"\">删除</a>	<a href=\"javascript:void(0);\" data-reveal-id=\"myModal2\" id="+d[i].id+"> 修改</a>"+"</td>\n"
+							+"</tr>\n"
+						$("tbody").append(txt)
+						}
+						
+					});	
+	}
+	
 </script>
 
 <meta name="decorator" content="default">
@@ -145,13 +176,13 @@
 				<a onclick="jumpTo('/admin/user.html')" href="#">用户管理</a>
 			</li>
 		</ul>
-		<form id="searchForm" class="breadcrumb form-search" style="float:right">
+		<form id="searchForm" class="breadcrumb form-search" style="float:right" action="medicinal.html" method="get">
 			
 			
-			<label>标题：</label><input id="title" name="title" class="input-small"
+			<label>标题：</label><input id="title" name="query" class="input-small"
 				type="text"  size="200">&nbsp; <input
 				id="btnSubmit" class="btn btn-primary" type="submit" value="查询">&nbsp;&nbsp;
-				<input id="btnSubmit" class="btn btn-primary" type="button" value="重建索引" onclick="junpTo('/admin/reIndex')">
+				<input id="btnSubmit" class="btn btn-primary" type="button" value="重建索引" onclick="jumpTo('/admin/reIndex')">
 			
 		</form>
 		
