@@ -152,6 +152,7 @@ public class OrderController {
 					orderDetail.setPrice(medicinals.get(i).getPrice());
 					orderDetail.setOrderId(orderId);
 					orderDetail.setAmount(medicinals.get(i).getAmount());
+					orderDetail.setOrderDate(new Date());
 					orderDetailService.insert(orderDetail);
 					price.add(medicinals.get(i).getPrice());
 			}

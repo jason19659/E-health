@@ -1,0 +1,256 @@
+<svg id="kity_svg_6" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="926" height="459" style="background: rgb(255, 255, 255); visibility: visible;" viewBox="0 0 926 459">
+    <defs id="kity_defs_7">
+        <linearGradient id="kity_linearGradient_17" x1="0" y1="0" x2="0" y2="1">
+            <stop id="kity_stop_18" offset="0" stop-color="rgb(255, 255, 255)"></stop>
+            <stop id="kity_stop_19" offset="1" stop-color="rgb(255, 255, 255)"></stop>
+        </linearGradient>
+        <marker id="kity_marker_2" orient="auto" refX="6" refY="0" viewBox="-7 -7 14 14" markerWidth="7" markerHeight="7" markerUnits="userSpaceOnUse">
+            <path id="kity_path_3" fill="rgb(0, 0, 0)" stroke="none" d="M6,0A6,6,0,1,1,-6,0A6,6,0,1,1,6,0"></path>
+        </marker>
+    </defs>
+    <g id="kity_g_8">
+        <g id="minder1" text-rendering="optimize-speed">
+            <g id="minder_connect_group1">
+                <path id="kity_path_31" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M484.5,238.5A147,1,0,0,1,337.5,239.5"></path>
+                <path id="kity_path_33" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M239.5,239.5C224.5,239.5,224.5,123.5,209.5,123.5L141.5,123.5"></path>
+                <path id="kity_path_35" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M141.5,123.5C126.5,123.5,126.5,45.5,111.5,45.5L31.5,45.5"></path>
+                <path id="kity_path_37" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M141.5,123.5C126.5,123.5,126.5,97.5,111.5,97.5L32.5,97.5"></path>
+                <path id="kity_path_39" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M141.5,123.5C126.5,123.5,126.5,149.5,111.5,149.5L31.5,149.5"></path>
+                <path id="kity_path_41" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M141.5,123.5C126.5,123.5,126.5,201.5,111.5,201.5L31.5,201.5"></path>
+                <path id="kity_path_43" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M239.5,239.5C224.5,239.5,224.5,279.5,209.5,279.5L130.5,279.5"></path>
+                <path id="kity_path_45" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M130.5,279.5C115.5,279.5,115.5,253.5,100.5,253.5L21.5,253.5"></path>
+                <path id="kity_path_47" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M130.5,279.5C115.5,279.5,115.5,305.5,100.5,305.5L20.5,305.5"></path>
+                <path id="kity_path_49" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M239.5,239.5C224.5,239.5,224.5,383.5,209.5,383.5L131.5,383.5"></path>
+                <path id="kity_path_51" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M131.5,383.5C116.5,383.5,116.5,357.5,101.5,357.5L22.5,357.5"></path>
+                <path id="kity_path_53" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M131.5,383.5C116.5,383.5,116.5,409.5,101.5,409.5L21.5,409.5"></path>
+                <path id="kity_path_55" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M484.5,238.5A214,135,0,0,0,698.5,373.5"></path>
+                <path id="kity_path_57" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M797.5,373.5C812.5,373.5,812.5,335.5,827.5,335.5L906.5,335.5"></path>
+                <path id="kity_path_59" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M797.5,373.5C812.5,373.5,812.5,387.5,827.5,387.5L906.5,387.5"></path>
+                <path id="kity_path_61" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M797.5,373.5C812.5,373.5,812.5,439.5,827.5,439.5L906.5,439.5"></path>
+                <path id="kity_path_63" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M484.5,238.5A206,115,0,0,1,690.5,123.5"></path>
+                <path id="kity_path_65" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M790.5,123.5C805.5,123.5,805.5,85.5,820.5,85.5L900.5,85.5"></path>
+                <path id="kity_path_67" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M790.5,123.5C805.5,123.5,805.5,137.5,820.5,137.5L900.5,137.5"></path>
+                <path id="kity_path_69" fill="none" stroke="rgb(0,0,0)" stroke-width="1" d="M790.5,123.5C805.5,123.5,805.5,189.5,820.5,189.5L900.5,189.5"></path>
+            </g>
+            <g id="minder_node1">
+                <path id="kity_path_193" fill="rgba(0, 0, 0, .25)" stroke="none" d="M428.5,196.5h192a47,47,0,0,1,47,47v0a47,47,0,0,1,-47,47h-192a47,47,0,0,1,-47,-47v0a47,47,0,0,1,47,-47z" display="none"></path>
+                <path id="node_outline1" fill="#ffffff" stroke="rgb(0,0,0)" d="M393.5,218.5h182a5,5,0,0,1,5,5v30a5,5,0,0,1,-5,5h-182a5,5,0,0,1,-5,-5v-30a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text1" fill="#000000">
+                    <text id="kity_text_22" text-rendering="inherit" font-size="16" dy=".8em" y="228.09999990463257" x="412.5">药店管理与零售系统</text>
+                </g>
+            </g>
+            <g id="kity_g_12">
+                <path id="kity_path_13" fill="none" stroke="none" d="M412.5,238.5h0v0h0z"></path>
+            </g>
+            <g id="kity_g_14">
+                <path id="kity_path_15" fill="none" stroke="none" d="M412.5,238.5h0v0h0z"></path>
+                <path id="kity_path_16" fill="none" stroke="none"></path>
+            </g>
+            <g id="minder_node2">
+                <path id="kity_path_190" fill="rgba(0, 0, 0, .25)" stroke="none" d="M248.5,230.5h94a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-94a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z" display="none"></path>
+                <g id="node_expander12" style="cursor: pointer;">
+                    <path id="kity_path_164" fill="white" stroke="gray" d="M238.5,239.5A6,6,0,1,1,226.5,239.5A6,6,0,1,1,238.5,239.5"></path>
+                    <path id="kity_path_165" fill="none" stroke="gray" d="M228,239.5L237,239.5"></path>
+                </g>
+                <path id="node_outline13" fill="#ffffff" stroke="rgb(0,0,0)" d="M242.5,226.5h90a3,3,0,0,1,3,3v20a3,3,0,0,1,-3,3h-90a3,3,0,0,1,-3,-3v-20a3,3,0,0,1,3,-3z" stroke-width="1"></path>
+                <g id="node_text13" fill="black">
+                    <text id="kity_text_93" text-rendering="inherit" font-size="14" dy=".8em" y="230.40000009536743" x="259.5">用户模块</text>
+                </g>
+            </g>
+            <g id="minder_node3">
+                <g id="node_expander5" style="cursor: pointer;">
+                    <path id="kity_path_143" fill="white" stroke="gray" d="M211.5,109.5A6,6,0,1,1,199.5,109.5A6,6,0,1,1,211.5,109.5"></path>
+                    <path id="kity_path_144" fill="none" stroke="gray" d="M201,109.5L210,109.5"></path>
+                </g>
+                <path id="node_outline6" fill="#ffffff" stroke="none" d="M146.5,98.5h48a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-48a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text6" fill="black">
+                    <text id="kity_text_79" text-rendering="inherit" font-size="12" dy=".8em" y="101.70000004768372" x="151.5">管理员</text>
+                </g>
+            </g>
+            <g id="minder_node4">
+                <g id="node_expander1" style="cursor: pointer;" display="none">
+                    <path id="kity_path_131" fill="white" stroke="gray" d="M113.5,31.5A6,6,0,1,1,101.5,31.5A6,6,0,1,1,113.5,31.5"></path>
+                    <path id="kity_path_132" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline2" fill="#ffffff" stroke="none" d="M36.5,20.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text2" fill="black">
+                    <text id="kity_text_71" text-rendering="inherit" font-size="12" dy=".8em" y="23.700000047683716" x="41.5">用户管理</text>
+                </g>
+            </g>
+            <g id="minder_node5">
+                <g id="node_expander2" style="cursor: pointer;" display="none">
+                    <path id="kity_path_134" fill="white" stroke="gray" d="M113.5,83.5A6,6,0,1,1,101.5,83.5A6,6,0,1,1,113.5,83.5"></path>
+                    <path id="kity_path_135" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline3" fill="#ffffff" stroke="none" d="M37.5,72.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text3" fill="black">
+                    <text id="kity_text_73" text-rendering="inherit" font-size="12" dy=".8em" y="75.70000004768372" x="42.5">药品管理</text>
+                </g>
+            </g>
+            <g id="minder_node6">
+                <g id="node_expander3" style="cursor: pointer;" display="none">
+                    <path id="kity_path_137" fill="white" stroke="gray" d="M113.5,135.5A6,6,0,1,1,101.5,135.5A6,6,0,1,1,113.5,135.5"></path>
+                    <path id="kity_path_138" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline4" fill="#ffffff" stroke="none" d="M36.5,124.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text4" fill="black">
+                    <text id="kity_text_75" text-rendering="inherit" font-size="12" dy=".8em" y="127.70000004768372" x="41.5">订单管理</text>
+                </g>
+            </g>
+            <g id="minder_node7">
+                <g id="node_expander4" style="cursor: pointer;" display="none">
+                    <path id="kity_path_140" fill="white" stroke="gray" d="M113.5,187.5A6,6,0,1,1,101.5,187.5A6,6,0,1,1,113.5,187.5"></path>
+                    <path id="kity_path_141" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline5" fill="#ffffff" stroke="none" d="M36.5,176.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text5" fill="black">
+                    <text id="kity_text_77" text-rendering="inherit" font-size="12" dy=".8em" y="179.70000004768372" x="41.5">查看统计</text>
+                </g>
+            </g>
+            <g id="minder_node8">
+                <g id="node_expander8" style="cursor: pointer;">
+                    <path id="kity_path_152" fill="white" stroke="gray" d="M211.5,265.5A6,6,0,1,1,199.5,265.5A6,6,0,1,1,211.5,265.5"></path>
+                    <path id="kity_path_153" fill="none" stroke="gray" d="M201,265.5L210,265.5"></path>
+                </g>
+                <path id="node_outline9" fill="#ffffff" stroke="none" d="M135.5,254.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text9" fill="black">
+                    <text id="kity_text_85" text-rendering="inherit" font-size="12" dy=".8em" y="257.7000000476837" x="140.5">工作人员</text>
+                </g>
+            </g>
+            <g id="minder_node9">
+                <g id="node_expander6" style="cursor: pointer;" display="none">
+                    <path id="kity_path_146" fill="white" stroke="gray" d="M102.5,239.5A6,6,0,1,1,90.5,239.5A6,6,0,1,1,102.5,239.5"></path>
+                    <path id="kity_path_147" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline7" fill="#ffffff" stroke="none" d="M26.5,228.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text7" fill="black">
+                    <text id="kity_text_81" text-rendering="inherit" font-size="12" dy=".8em" y="231.70000004768372" x="31.5">药品管理</text>
+                </g>
+            </g>
+            <g id="minder_node10">
+                <g id="node_expander7" style="cursor: pointer;" display="none">
+                    <path id="kity_path_149" fill="white" stroke="gray" d="M102.5,291.5A6,6,0,1,1,90.5,291.5A6,6,0,1,1,102.5,291.5"></path>
+                    <path id="kity_path_150" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline8" fill="#ffffff" stroke="none" d="M25.5,280.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text8" fill="black">
+                    <text id="kity_text_83" text-rendering="inherit" font-size="12" dy=".8em" y="283.7000000476837" x="30.5">订单管理</text>
+                </g>
+            </g>
+            <g id="minder_node11">
+                <g id="node_expander11" style="cursor: pointer;">
+                    <path id="kity_path_161" fill="white" stroke="gray" d="M211.5,369.5A6,6,0,1,1,199.5,369.5A6,6,0,1,1,211.5,369.5"></path>
+                    <path id="kity_path_162" fill="none" stroke="gray" d="M201,369.5L210,369.5"></path>
+                </g>
+                <path id="node_outline12" fill="#ffffff" stroke="none" d="M136.5,358.5h58a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-58a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text12" fill="black">
+                    <text id="kity_text_91" text-rendering="inherit" font-size="12" dy=".8em" y="361.7000000476837" x="141.5">普通用户</text>
+                </g>
+            </g>
+            <g id="minder_node12">
+                <g id="node_expander9" style="cursor: pointer;" display="none">
+                    <path id="kity_path_155" fill="white" stroke="gray" d="M103.5,343.5A6,6,0,1,1,91.5,343.5A6,6,0,1,1,103.5,343.5"></path>
+                    <path id="kity_path_156" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline10" fill="#ffffff" stroke="none" d="M27.5,332.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text10" fill="black">
+                    <text id="kity_text_87" text-rendering="inherit" font-size="12" dy=".8em" y="335.7000000476837" x="32.5">查看药品</text>
+                </g>
+            </g>
+            <g id="minder_node13">
+                <g id="node_expander10" style="cursor: pointer;" display="none">
+                    <path id="kity_path_158" fill="white" stroke="gray" d="M103.5,395.5A6,6,0,1,1,91.5,395.5A6,6,0,1,1,103.5,395.5"></path>
+                    <path id="kity_path_159" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline11" fill="#ffffff" stroke="none" d="M26.5,384.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text11" fill="black">
+                    <text id="kity_text_89" text-rendering="inherit" font-size="12" dy=".8em" y="387.7000000476837" x="31.5">新增订单</text>
+                </g>
+            </g>
+            <g id="minder_node14">
+                <path id="kity_path_191" fill="rgba(0, 0, 0, .25)" stroke="none" d="M709.5,364.5h95a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-95a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z" display="none"></path>
+                <g id="node_expander16" style="cursor: pointer;">
+                    <path id="kity_path_176" fill="white" stroke="gray" d="M699.5,373.5A6,6,0,1,1,687.5,373.5A6,6,0,1,1,699.5,373.5"></path>
+                    <path id="kity_path_177" fill="none" stroke="gray" d="M689,373.5L698,373.5"></path>
+                </g>
+                <path id="node_outline17" fill="#ffffff" stroke="rgb(0,0,0)" d="M703.5,360.5h91a3,3,0,0,1,3,3v20a3,3,0,0,1,-3,3h-91a3,3,0,0,1,-3,-3v-20a3,3,0,0,1,3,-3z" stroke-width="1"></path>
+                <g id="node_text17" fill="black">
+                    <text id="kity_text_101" text-rendering="inherit" font-size="14" dy=".8em" y="364.40000009536743" x="720.5">药品管理</text>
+                </g>
+            </g>
+            <g id="minder_node15">
+                <g id="node_expander13" style="cursor: pointer;" display="none">
+                    <path id="kity_path_167" fill="white" stroke="gray" d="M837.5,321.5A6,6,0,1,1,825.5,321.5A6,6,0,1,1,837.5,321.5"></path>
+                    <path id="kity_path_168" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline14" fill="#ffffff" stroke="none" d="M842.5,310.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text14" fill="black">
+                    <text id="kity_text_95" text-rendering="inherit" font-size="12" dy=".8em" y="313.7000000476837" x="847.5">增加药品</text>
+                </g>
+            </g>
+            <g id="minder_node16">
+                <g id="node_expander14" style="cursor: pointer;" display="none">
+                    <path id="kity_path_170" fill="white" stroke="gray" d="M837.5,373.5A6,6,0,1,1,825.5,373.5A6,6,0,1,1,837.5,373.5"></path>
+                    <path id="kity_path_171" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline15" fill="#ffffff" stroke="none" d="M842.5,362.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text15" fill="black">
+                    <text id="kity_text_97" text-rendering="inherit" font-size="12" dy=".8em" y="365.7000000476837" x="847.5">修改药品</text>
+                </g>
+            </g>
+            <g id="minder_node17">
+                <g id="node_expander15" style="cursor: pointer;" display="none">
+                    <path id="kity_path_173" fill="white" stroke="gray" d="M837.5,425.5A6,6,0,1,1,825.5,425.5A6,6,0,1,1,837.5,425.5"></path>
+                    <path id="kity_path_174" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline16" fill="#ffffff" stroke="none" d="M842.5,414.5h59a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-59a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text16" fill="black">
+                    <text id="kity_text_99" text-rendering="inherit" font-size="12" dy=".8em" y="417.7000000476837" x="847.5">删除药品</text>
+                </g>
+            </g>
+            <g id="minder_node18">
+                <path id="kity_path_192" fill="rgba(0, 0, 0, .25)" stroke="none" d="M701.5,114.5h96a5,5,0,0,1,5,5v18a5,5,0,0,1,-5,5h-96a5,5,0,0,1,-5,-5v-18a5,5,0,0,1,5,-5z" display="none"></path>
+                <g id="node_expander20" style="cursor: pointer;">
+                    <path id="kity_path_188" fill="white" stroke="gray" d="M803.5,123.5A6,6,0,1,1,791.5,123.5A6,6,0,1,1,803.5,123.5"></path>
+                    <path id="kity_path_189" fill="none" stroke="gray" d="M793,123.5L802,123.5"></path>
+                </g>
+                <path id="node_outline21" fill="#ffffff" stroke="rgb(0,0,0)" d="M695.5,110.5h92a3,3,0,0,1,3,3v20a3,3,0,0,1,-3,3h-92a3,3,0,0,1,-3,-3v-20a3,3,0,0,1,3,-3z" stroke-width="1"></path>
+                <g id="node_text21" fill="black">
+                    <text id="kity_text_109" text-rendering="inherit" font-size="14" dy=".8em" y="114.40000009536743" x="712.5">订单管理</text>
+                </g>
+            </g>
+            <g id="minder_node19">
+                <g id="node_expander17" style="cursor: pointer;" display="none">
+                    <path id="kity_path_179" fill="white" stroke="gray" d="M830.5,71.5A6,6,0,1,1,818.5,71.5A6,6,0,1,1,830.5,71.5"></path>
+                    <path id="kity_path_180" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline18" fill="#ffffff" stroke="none" d="M835.5,60.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text18" fill="black">
+                    <text id="kity_text_103" text-rendering="inherit" font-size="12" dy=".8em" y="63.700000047683716" x="840.5">修改订单</text>
+                </g>
+            </g>
+            <g id="minder_node20">
+                <g id="node_expander18" style="cursor: pointer;" display="none">
+                    <path id="kity_path_182" fill="white" stroke="gray" d="M830.5,123.5A6,6,0,1,1,818.5,123.5A6,6,0,1,1,830.5,123.5"></path>
+                    <path id="kity_path_183" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline19" fill="#ffffff" stroke="none" d="M835.5,112.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text19" fill="black">
+                    <text id="kity_text_105" text-rendering="inherit" font-size="12" dy=".8em" y="115.70000004768372" x="840.5">取消订单</text>
+                </g>
+            </g>
+            <g id="minder_node21">
+                <g id="node_expander19" style="cursor: pointer;" display="none">
+                    <path id="kity_path_185" fill="white" stroke="gray" d="M830.5,175.5A6,6,0,1,1,818.5,175.5A6,6,0,1,1,830.5,175.5"></path>
+                    <path id="kity_path_186" fill="none" stroke="gray"></path>
+                </g>
+                <path id="node_outline20" fill="#ffffff" stroke="none" d="M835.5,164.5h60a5,5,0,0,1,5,5v12a5,5,0,0,1,-5,5h-60a5,5,0,0,1,-5,-5v-12a5,5,0,0,1,5,-5z" stroke-width="3"></path>
+                <g id="node_text20" fill="black">
+                    <text id="kity_text_107" text-rendering="inherit" font-size="12" dy=".8em" y="167.70000004768372" x="840.5">完成订单</text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
